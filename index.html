@@ -2,80 +2,140 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Bitácora Jurídica</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bitácora Jurídica | VG</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap');
+
+    * {
       margin: 0;
-      background-color: #f7f7f7;
+      padding: 0;
+      box-sizing: border-box;
     }
-    header {
-      background-color: #1a237e;
-      color: white;
-      padding: 20px;
-      text-align: center;
+
+    body {
+      font-family: 'Playfair Display', serif;
+      background-color: #fff;
+      color: #1a1a1a;
+      display: flex;
+      min-height: 100vh;
     }
-    nav {
-      background-color: #3949ab;
-      padding: 10px;
-      text-align: center;
+
+    aside {
+      background-color: #000;
+      color: #fff;
+      width: 220px;
+      padding: 30px 20px;
+      position: fixed;
+      height: 100vh;
     }
-    nav a {
-      color: white;
-      margin: 0 10px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .content {
-      padding: 20px;
-    }
-    section {
+
+    aside h1 {
+      font-size: 24px;
       margin-bottom: 40px;
-      background: white;
-      padding: 20px;
-      border-radius: 8px;
-    }
-    footer {
-      background-color: #1a237e;
-      color: white;
+      color: #FFD700;
       text-align: center;
-      padding: 10px;
+    }
+
+    aside nav a {
+      display: block;
+      color: #fff;
+      text-decoration: none;
+      margin: 15px 0;
+      font-size: 16px;
+      transition: color 0.3s;
+    }
+
+    aside nav a:hover {
+      color: #FFD700;
+    }
+
+    main {
+      margin-left: 220px;
+      padding: 40px;
+      flex: 1;
+    }
+
+    section {
+      margin-bottom: 50px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    section h2 {
+      color: #000;
+      border-left: 5px solid #FFD700;
+      padding-left: 10px;
+      margin-bottom: 15px;
+      font-size: 26px;
+    }
+
+    section p {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
       font-size: 0.9em;
+      color: #888;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        flex-direction: column;
+      }
+
+      aside {
+        position: relative;
+        width: 100%;
+        height: auto;
+        text-align: center;
+      }
+
+      main {
+        margin-left: 0;
+        padding: 20px;
+      }
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Bitácora Jurídica</h1>
-    <p>Blog personal para aprender y compartir temas de Derecho</p>
-  </header>
-  <nav>
-    <a href="#penal">Derecho Penal</a>
-    <a href="#civil">Derecho Civil</a>
-    <a href="#procesal">Procedimiento Penal</a>
-    <a href="#otros">Otros temas</a>
-  </nav>
-  <div class="content">
+  <aside>
+    <h1>VG</h1>
+    <nav>
+      <a href="#penal">Derecho Penal</a>
+      <a href="#civil">Derecho Civil</a>
+      <a href="#procesal">Procedimiento Penal</a>
+      <a href="#amparo">Amparo</a>
+      <a href="#otros">Otros temas</a>
+    </nav>
+  </aside>
+  <main>
     <section id="penal">
       <h2>Derecho Penal</h2>
-      <p>En esta sección escribiré sobre delitos, tipos penales, teoría del delito, y jurisprudencia relacionada. También anotaré casos interesantes y mis apuntes de clase.</p>
+      <p>En esta sección escribiré sobre delitos, tipos penales, teoría del delito y jurisprudencia relacionada.</p>
     </section>
     <section id="civil">
       <h2>Derecho Civil</h2>
-      <p>Aquí compartiré conceptos clave como contratos, personas, bienes, sucesiones, obligaciones, etc. Este espacio me ayudará a repasar mientras escribo.</p>
+      <p>Contratos, personas, bienes, sucesiones, obligaciones y demás conceptos del Derecho Civil.</p>
     </section>
     <section id="procesal">
       <h2>Procedimiento Penal</h2>
-      <p>Explicaré las etapas del proceso penal en México: investigación, intermedia y juicio. También hablaré de los principios del sistema acusatorio y lo que voy aprendiendo sobre el Código Nacional.</p>
+      <p>Etapas del proceso penal, principios del sistema acusatorio y lo que voy aprendiendo del CNPP.</p>
+    </section>
+    <section id="amparo">
+      <h2>Amparo</h2>
+      <p>Conceptos clave del juicio de amparo, tipos, principios y criterios importantes.</p>
     </section>
     <section id="otros">
       <h2>Otros temas</h2>
-      <p>Todo lo que no entre en las categorías anteriores: derecho laboral, constitucional, reflexiones personales sobre justicia, notas sobre ética, etc.</p>
+      <p>Derecho laboral, constitucional, ética jurídica, reflexiones personales y notas generales.</p>
     </section>
-  </div>
-  <footer>
-    <p>Hecho con dedicación y amor | Bitácora Jurídica</p>
-  </footer>
+    <footer>
+      <p>Bitácora Jurídica | VG</p>
+    </footer>
+  </main>
 </body>
 </html>
